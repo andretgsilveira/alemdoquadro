@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="manage">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Estrela</th>
+        <th scope="col">Comentario</th>
+        <th scope="col">Data</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for evaluation in evaluations%}
+      <tr>
+        <th scope="row">{{ evaluation.id }}</th>
+        <td>{{ evaluation.star }}</td>
+        <td>{{ evaluation.evaluation }}</td>
+        <td>{{ evaluation.date_created }}</td>
+        <td><a href="/delete/{{ evaluation.id }}" type="button" class="btn btn-secondary btn-sm">Delete</a></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+  
+{% endblock %}

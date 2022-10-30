@@ -1,0 +1,256 @@
+*{
+    box-sizing: border-box;
+    color:white;
+}
+body{
+    background-color: rgb(0, 0, 0);
+}
+
+.navbar{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.container-logo {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.container-logo > .logo {
+    width: 10vh;
+    border-radius: 50%;
+}
+
+.container-logo > h1 {
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.carousel {
+    padding: 0;
+}
+
+.carousel-item {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+    max-height: 75vh;
+}
+.carousel-item > img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    max-height: 75vh;
+}
+.logo {
+    width: 150px;
+}
+
+#btn-mobile{
+    display: none;
+}
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0px;
+    margin: 0px;
+}
+@media (max-width: 600px) {
+    #btn-mobile{
+        display: block;
+    }
+    #menu { 
+        display: flex;
+        visibility: hidden;        
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        top:100%;
+        right: 0px;
+        background: rgba(255, 165, 0, 0.6);
+        padding: 0px;
+        margin: 0px;
+        z-index:9999;
+        overflow-y: hidden;
+        transition: height .6s;
+        height: 0px;
+    }
+    #nav.active #menu{
+        visibility: visible;
+        height: 84px;
+        overflow-y: auto;
+    }
+    #nav.active .menu-item {
+        border-bottom: 2px solid rgba(0,0,0,0.05);
+    }
+
+    #btn-mobile {
+        display: flex;
+        color: white;
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    #nav {
+        padding: 10px;
+        width: 90px;
+        display: flex;
+        justify-content: space-between;
+    }
+    #hamburger { 
+        margin-top: 2px;
+        width: 20px;
+        background: none;
+        color: white;
+        border-top: 2px solid;
+    }
+    
+    #hamburger::after, #hamburger::before {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 2px;
+        background: currentColor;
+        margin-top: 5px;
+        transition: .6s;
+        position: relative;
+    }
+    
+    #nav.active #hamburger {
+        border-top-color: transparent;
+        
+    }
+    
+    #nav.active #hamburger::before {
+        transform: rotate(135deg);
+    }
+    
+    #nav.active #hamburger::after {
+        transform: rotate(-135deg);
+        top: -7px;
+    }
+
+    #imagem {
+        margin: 0 auto;
+    }
+    .comment {
+        margin: 20px 20px;
+        width: 70vw;
+        height: 150px;
+        padding: 10px;
+    }
+    
+    .btn-enviar {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    tr th:nth-of-type(3),tr th:nth-of-type(3) {
+        display: none;
+    }
+    
+    tr th:nth-of-type(4),tr th:nth-of-type(4) {
+        display: none;
+    }
+}
+
+.gallery-container{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px auto;
+    justify-content: space-between;
+}
+
+.gallery-item {
+    box-sizing: border-box;
+    flex: 1 1 300px;
+    margin: 10px;
+    width: 50%;
+
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: azure;
+    text-align: center;
+    margin: 20px;
+}
+
+.contato .titulo-contato {
+    margin: 10px;
+}
+
+.contato > a, .btn-enviar  {
+    width: 300px;
+    margin: 5px;
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.contato > a:hover, .btn-enviar:hover  {
+
+    background-color: #3e8a41; /* Green */
+
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container-footer {
+    display: flex;
+    flex-direction: row;
+}
+
+#instagram {
+    display: flex;
+    align-items: center;
+}
+
+#instagram > img{
+    width: 50px;
+}
+
+.comment {
+    margin: 20px auto;
+    width: 70vw;
+    height: 150px;
+    padding: 10px;
+}
+
+.btn-enviar {
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.manage {
+    margin-left: 25px;
+    margin-right: 25px;
+}

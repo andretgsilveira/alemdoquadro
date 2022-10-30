@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<form action="/arquivos"
+      method="POST"  
+      class="comment-box text-center" 
+      enctype="multipart/form-data">
+
+      {% if message %}
+        <p class="message" style="color: red;" alt= "{{ message }}">{{ message + tipo | safe}}</p>  
+      {% endif %}
+  <input type="file" id="imagem" name="imagem"><br>
+
+    <div class="comment-area">
+      <textarea class="form-control comment" placeholder="Escreva aqui a descrição da imagem" name="descricao" required></textarea>
+    </div>
+
+  <div class="text-center mt-4">
+    <input type="submit" class="btn-enviar" value="Enviar"> 
+  </div>
+</form>
+
+<div class="manage">
+  <table class="table table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Arquivo</th>
+        <th scope="col">Data</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for imagem in imagens %}
+      <tr>
+        <th scope="row">{{ imagem.id }}</th>
+        <th>{{ imagem.descricao }}</th>
+        <th>{{ imagem.nome_do_arquivo }}</th>
+        <th>{{ imagem.date_created }}</th>
+        <th><a href="/delete/{{ imagem.id }}" type="button" class="btn btn-secondary btn-sm">Delete</a></th>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+
+{% endblock %}

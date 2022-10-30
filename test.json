@@ -1,0 +1,26 @@
+[
+  {
+    "date_created": "Sun, 26 Jun 2022 13:22:28 GMT",
+    "descricao": "Dinosauro digitando em maquina de escrever",
+    "id": 1,
+    "nome_do_arquivo": "imagem (1).jpg",
+    "path": "C:\\Users\\andre\\Desktop\\PI2-Univesp-Grupo-091-\\static\\imagens\\Photos-001\\imagem (1).jpg",
+    "relative_path": "..\\static\\imagens\\Photos-001\\imagem (1).jpg"
+  },
+  {
+    "date_created": "Sun, 26 Jun 2022 13:22:58 GMT",
+    "descricao": "Elefante acorrentado sentado sobre livros pensando",
+    "id": 2,
+    "nome_do_arquivo": "imagem (2).jpg",
+    "path": "C:\\Users\\andre\\Desktop\\PI2-Univesp-Grupo-091-\\static\\imagens\\Photos-001\\imagem (2).jpg",
+    "relative_path": "..\\static\\imagens\\Photos-001\\imagem (2).jpg"
+  },
+  {
+    "date_created": "Sun, 26 Jun 2022 13:23:15 GMT",
+    "descricao": "Astronalta soltou no espa\u00e7o",
+    "id": 3,
+    "nome_do_arquivo": "imagem (4).jpg",
+    "path": "C:\\Users\\andre\\Desktop\\PI2-Univesp-Grupo-091-\\static\\imagens\\Photos-001\\imagem (4).jpg",
+    "relative_path": "..\\static\\imagens\\Photos-001\\imagem (4).jpg"
+  }
+]
