@@ -7,8 +7,9 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-DIRETORIO = 'C:\\Users\\andre\\Desktop\\PI2-Univesp-Grupo-091-\\static\\imagens\\Photos-001'
-DIRETORIO_RELATIVO = '..\static\imagens\Photos-001'
+DIRETORIO = '/usr/src/app/project/static/imagens/Photos-001'
+
+DIRETORIO_RELATIVO = './static/imagens/Photos-001'
 
 app = Flask(__name__)
 
@@ -156,5 +157,11 @@ def delete(id):
         return redirect('/cadastro')
     except:
         return "Não foi possivel deletar a imagem"
+
+@app.route('/limpaDir')
+def limpaDir():
+    # Limpa a pasta da imagens
+    for file in os.listdir(DIRETORIO):
+        os.remove(file)
 
 
