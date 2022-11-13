@@ -5,6 +5,7 @@ import cloudinary
 import cloudinary.uploader
 import os
 from dotenv import load_dotenv
+import json
 
 load_dotenv()
 DIRETORIO = '/usr/src/app/project/static/imagens/Photos-001'
@@ -29,16 +30,15 @@ else:
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-
 db = SQLAlchemy(app)
 
 class Imagens(db.Model):
     __tablename__ = 'tb_imagens'
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.Integer)
     path = db.Column(db.String(500))
     relative_path = db.Column(db.String(500))
     descricao = db.Column(db.String(500))
-    nome_do_arquivo = db.Column(db.String(500))
+    nome_do_arquivo = db.Column(db.String(500), primary_key=True)
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
@@ -132,7 +132,6 @@ def post_imagem():
         else:
             return render_template('cadastro.html', message='Tipo de arquivo incorreto, selecione uma imagem png ou jpeg!', tipo=imagem.mimetype)
 
-
 @app.route('/delete/<int:id>')
 def delete(id):
     imagemDelete = Imagens.query.get_or_404(id)
@@ -164,4 +163,27 @@ def limpaDir():
     for file in os.listdir(DIRETORIO):
         os.remove(file)
 
+@app.route('/seed')
+def seed():
 
+    with open('/usr/src/app/project/static/test.json', 'r', encoding='utf8') as f:
+        dict = json.load(f)
+
+    try:
+        for imagem in dict['imagens']:
+            caminho = 'empty'
+            caminho_relativo = imagem['relative_path']
+            alt = imagem['descricao']
+            nome_do_arquivo = imagem['nome_do_arquivo']
+
+            new_image = Imagens(path=caminho, relative_path=caminho_relativo, descricao=alt,
+                            nome_do_arquivo=nome_do_arquivo)
+            try:
+                db.session.add(new_image)
+                db.session.commit()
+            finally:
+                pass
+    except:
+        mensagem = 'Seed ja executado!'
+
+    return render_template('cadastro.html', message=mensagem)

@@ -1,0 +1,52 @@
+{
+  "imagens" : [{
+                "descricao": "Dinosauro digitando em maquina de escrever",
+                "nome_do_arquivo": "imagem (1).jpg",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (1).jpg"
+              },
+              {
+                "descricao": "Elefante acorrentado sentado sobre livros pensando",
+                "nome_do_arquivo": "imagem (2).jpg",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (2).jpg"
+              },
+              {
+                "descricao": "Astronalta soltou no espa\u00e7o",
+                "nome_do_arquivo": "imagem (4).jpg",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (4).jpg"
+              },
+  {
+                "descricao": "Releitura do Frankenstein",
+                "nome_do_arquivo": "imagem (3).jpg",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (3).jpg"
+              },
+              {
+                "descricao": "Genio preso em lampada moderna",
+                "nome_do_arquivo": "imagem (5).jpg",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (5).jpg"
+              },{
+                "descricao": "Lesma atendende gritando NEXT",
+                "nome_do_arquivo": "imagem (6).jpg",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (6).jpg"
+              },
+              {
+                "descricao": "Boneca lider de torcida",
+                "nome_do_arquivo": "imagem (7).png",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (7).png"
+              },
+              {
+                "descricao": "Lutador com duas espadas e mascara de javali",
+                "nome_do_arquivo": "imagem (8).png",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (8).png"
+              },
+              {
+                "descricao": "Monge com flecha desenhada na cabeça, manipulando o ar.",
+                "nome_do_arquivo": "imagem (9).png",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (9).png"
+              },
+              {
+                "descricao": "Jovem em cima do telhado tocando violino",
+                "nome_do_arquivo": "imagem (10).png",
+                "relative_path": "..\\static\\imagens\\Photos-001\\imagem (10).png"
+              }
+  ]
+}
