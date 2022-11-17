@@ -35,7 +35,7 @@ jobs:
       run: docker-compose up -d
 
     - name: Test
-      run: ls services
+      run: ls services/web/project
         
     
     
