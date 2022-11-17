@@ -32,6 +32,9 @@ jobs:
       run: docker-compose build
       
     - name: Docker up
-      run: sudo docker-compose up -d
+      run: docker-compose up -d
+
+    - name: Test
+      run: python /usr/src/app/project/teste_api.py
     
     
