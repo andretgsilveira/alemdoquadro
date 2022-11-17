@@ -35,6 +35,9 @@ jobs:
       run: docker-compose up -d
 
     - name: Test
-      run: python services/project/teste_api.py
+      run: ls services
+        
+    
+    
     
     
