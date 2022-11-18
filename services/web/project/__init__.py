@@ -18,7 +18,6 @@ cloudinary.config(cloud_name = os.getenv('CLOUD_NAME'), api_key=os.getenv('API_K
     api_secret=os.getenv('API_SECRET'))
 
 ENV = 'dev'
-print( os.environ.get('DATABASE_URL_LOCALHOST'))
 
 if ENV == 'dev':
     app.debug = True
