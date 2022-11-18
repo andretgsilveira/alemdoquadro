@@ -35,7 +35,11 @@ jobs:
       run: docker-compose up -d
 
     - name: Test
-      run: python services/web/project/teste_api.py
+      run: |
+        cd services/web/project
+        python __init__.py &
+        sleep 10
+        python teste_api.py
         
     
     
