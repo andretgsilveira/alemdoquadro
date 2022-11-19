@@ -38,6 +38,7 @@ jobs:
       run: |
         cd services/web/project
         python -m pip install -r ../requirements.txt
+        python -m pip install psycopg2
         python __init__.py &
         sleep 10
         python teste_api.py
